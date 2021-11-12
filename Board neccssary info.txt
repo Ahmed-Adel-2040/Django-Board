@@ -1,0 +1,6 @@
+pg4 admin pass >> 12345
+super user >>> ahmed
+
+
+django user name >> ahmedadel
+pass word >> ahmed2040

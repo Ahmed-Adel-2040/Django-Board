@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Edit the post
+{% endblock %}
+
+{% block breadcrumb %}
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+     <li class="breadcrumb-item"><a href="{% url 'boards_topic' post.topic.board.pk %}">{{ post.topic.board.name }}</a></li>
+  <li class="breadcrumb-item active">Edit Post</li>
+
+{% endblock %}
+
+{% block content %}
+    <form method="post" novalidate>
+    {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+    {% include 'Includes/Forms.html' %}
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    </form>
+{% endblock %}
